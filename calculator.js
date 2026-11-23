@@ -87,6 +87,12 @@ for (let i = 0; i <= 9; i++) {
             pressedNumber(i);
         })
     }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key.toLowerCase() == i) {
+            pressedNumber(i);
+        }
+    })
 }
 
 function pressedOperator(choosenOperator) {
