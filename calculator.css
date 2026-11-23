@@ -1,0 +1,279 @@
+/*
+#body{
+	background-color: #2c2c2e;
+	border-radius: 5%;
+	position:fixed;
+	height: 90%;
+	width: 30%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: -1;
+}
+
+#display{
+	background-color: #202b24;
+	border: 0.3vw solid black;
+	padding: 15px;
+	position: fixed;
+	height: 25%;
+	width: 25%;
+	top: 22%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+*/
+
+[id^="btn-"] {
+    user-select: none;
+    transition: transform 0.05s ease, background-color 0.05s ease;
+    position: fixed;
+    height: 5%;
+    width: 5.5%;
+    z-index: 2;
+    border-radius: 8%;
+    text-align: center;
+    align-content: center;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    font-family: var(--font-main);
+}
+
+[id^="btn-"]:active {
+    background-color: var(--btn-active);
+    transform: scale(0.95);
+}
+
+:root {
+    --page-bg: #1c1c1e;
+    --body-bg: #2c2c2e;
+    --body-border: none;
+    --display-bg: #202b24;
+    --display-text: #ffffff;
+    --display-border: 0.3vw solid #000000;
+    --btn-bg: #ededed;
+    --btn-text: #000000;
+    --btn-active: #c7c7cc;
+    --font-main: system-ui, -apple-system, sans-serif;
+    /*adapts to system default, checks from left -> right*/
+    --font-display: monospace;
+}
+
+body.theme-light {
+    /*"body." for higher priority to override root, also makes class only apply to html body element*/
+    --page-bg: #e5e5ea;
+    --body-bg: #ffffff;
+    --body-border: 2px solid #d1d1d6;
+    --display-bg: #f2f2f7;
+    --display-text: #1c1c1e;
+    --display-border: 0.2vw solid #c7c7cc;
+    --btn-bg: #616161;
+    --btn-text: #ededed;
+    --btn-active: #aeaeb2;
+    --font-main: 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body.theme-retro {
+    --page-bg: #d6cfc2;
+    --body-bg: #e8e0d0;
+    --body-border: 3px solid #8c8270;
+    --display-bg: #9ead86;
+    --display-text: #222918;
+    --display-border: 0.3vw solid #5c5446;
+    --btn-bg: #4a453e;
+    --btn-text: #f5f0e6;
+    --btn-active: #2e2b26;
+    --font-main: 'Courier New', Courier, monospace;
+    --font-display: 'Courier New', Courier, monospace;
+}
+
+body.theme-highContrast {
+    --page-bg: #090a0f;
+    --body-bg: #121521;
+    --body-border: 2px solid #00f3ff;
+    --display-bg: #07090e;
+    --display-text: #00f3ff;
+    --display-border: 0.2vw solid #ff007f;
+    --btn-bg: #1d2236;
+    --btn-text: #ff007f;
+    --btn-active: #00f3ff;
+    --font-main: 'Trebuchet MS', sans-serif;
+    --font-display: 'Consolas', monospace;
+}
+
+body {
+    /*targets the html <body> tag,*/
+    background-color: var(--page-bg);
+    font-family: var(--font-main);
+    transition: background-color 0.2s ease;
+}
+
+#themes {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 5;
+    gap: 10px;
+}
+
+.theme-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: solid rgba(128, 128, 128, 0.4);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    font-family: var(--font-main);
+    font-weight: 600;
+    transition: transform 0.1s ease;
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px);
+}
+
+#body {
+    background-color: var(--body-bg);
+    border: var(--body-border);
+    border-radius: 5%;
+    position: fixed;
+    height: 70%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#display {
+    background-color: var(--display-bg);
+    border: var(--display-border);
+    color: var(--display-text);
+    font-family: var(--font-display);
+    font-size: 50px;
+    padding: 15px;
+    position: fixed;
+    height: 25%;
+    width: 25%;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/*
+.placeholder{
+	background-color: white;
+	position: fixed;
+	height: 51%;
+	width: 27%;
+	top: 64%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+*/
+
+#btn-0 {
+    top: 74%;
+    left: 37.5%;
+}
+
+#btn-decimal {
+    top: 74%;
+    left: 44%;
+}
+
+#btn-negative {
+    top: 74%;
+    left: 50.5%;
+}
+
+#btn-enter {
+    top: 74%;
+    left: 57%;
+}
+
+#btn-plus {
+    top: 68%;
+    left: 57%;
+}
+
+#btn-minus {
+    top: 62%;
+    left: 57%;
+}
+
+#btn-multiply {
+    top: 56%;
+    left: 57%;
+}
+
+#btn-divide {
+    top: 50%;
+    left: 57%;
+}
+
+#btn-1 {
+    top: 68%;
+    left: 37.5%;
+}
+
+#btn-2 {
+    top: 68%;
+    left: 44%;
+}
+
+#btn-3 {
+    top: 68%;
+    left: 50.5%;
+}
+
+#btn-4 {
+    top: 62%;
+    left: 37.5%;
+}
+
+#btn-5 {
+    top: 62%;
+    left: 44%;
+}
+
+#btn-6 {
+    top: 62%;
+    left: 50.5%;
+}
+
+#btn-7 {
+    top: 56%;
+    left: 37.5%;
+}
+
+#btn-8 {
+    top: 56%;
+    left: 44%;
+}
+
+#btn-9 {
+    top: 56%;
+    left: 50.5%;
+}
+
+#btn-square {
+    top: 50%;
+    left: 50.5%;
+}
+
+#btn-pi {
+    top: 50%;
+    left: 44%;
+}
+
+#btn-clear {
+    top: 50%;
+    left: 37.5%;
+}
